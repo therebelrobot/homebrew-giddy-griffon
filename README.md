@@ -1,2 +1,3 @@
 # homebrew-giddy-griffon
-A subsection of TheGiddyLimit/homebrew for development
+
+a script. to convert stuff. what stuff you may ask? great question.
