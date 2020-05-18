@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/therebelrobot/homebrew-giddy-griffon#readme",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "objectro": "^1.0.6"
   }
 }

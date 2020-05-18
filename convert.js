@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const objectro = require("objectro").default;
 const _ = require("lodash");
 const fs = require("fs");
@@ -41,9 +43,9 @@ const newObjects = Object.values(sourceItems).map((source) => {
             ...imageDefault.href,
             url: `https://${
               process.env.IMAGE_SOURCE
-            }/Assets/By%20Artist%20or%20Source/The%20Griffon%27s%20Saddlebag/${encodeURIComponent(
-              value.replace(/'/g, "’")
-            )}.png`,
+            }/Assets/By%20Artist%20or%20Source/${
+              process.env.IMAGE_SUBFOLDER
+            }/${encodeURIComponent(value.replace(/'/g, "’"))}.png`,
           },
         },
       };
@@ -163,13 +165,13 @@ const finalBrew = {
   _meta: {
     sources: [
       {
-        json: "TGS",
-        abbreviation: "TGS",
-        full: "The Griffon's Saddlebag",
-        authors: ["/u/griff-mac"],
-        convertedBy: ["aster", "mrvauxs", "fantom"],
+        json: process.env.ABBREVIATION,
+        abbreviation: process.env.ABBREVIATION,
+        full: process.env.FULL_NAME,
+        authors: [process.env.AUTHOR],
+        convertedBy: ["fantom"],
         version: "1.0.0",
-        url: "https://www.patreon.com/the_griffons_saddlebag",
+        url: process.env.URL,
         targetSchema: "1.0.0",
       },
     ],
@@ -178,10 +180,7 @@ const finalBrew = {
   },
   item: newObjects,
 };
-const outPath = path.resolve(
-  __dirname,
-  "./item/griff-mac; The Griffon's Saddlebag.json"
-);
+const outPath = path.resolve(__dirname, process.env.FILENAME);
 fs.writeFile(outPath, JSON.stringify(finalBrew, null, "  "), (err) => {
   if (err) throw err;
   console.log("write complete");
