@@ -5,7 +5,9 @@
   "main": "convert.js",
   "scripts": {
     "convert": "node convert.js",
-    "dev": "nodemon convert.js --ignore item"
+    "dev": "nodemon convert.js --ignore item",
+    "serve": "serve -p 9999",
+    "tunnel": "ngrok http 9999"
   },
   "repository": {
     "type": "git",
@@ -20,5 +22,8 @@
   "dependencies": {
     "dotenv": "^8.2.0",
     "objectro": "^1.0.6"
+  },
+  "devDependencies": {
+    "serve": "^11.3.0"
   }
 }
