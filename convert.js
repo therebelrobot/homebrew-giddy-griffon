@@ -17,9 +17,7 @@ const defaultItemImage = {
 const defaultCredits = {
   name: "Credits",
   type: "inset",
-  entries: [
-    "This item is part of the 'Griffon's Saddlebag', a growing collection of hundreds of items that are fun, flavorful, and ready for your campaign. For more items and access to exclusive extra's, you can support griffmac on his {@link website|https://www.thegriffonssaddlebag.com} or his {@link Patreon|https://www.patreon.com/the_griffons_saddlebag}.",
-  ],
+  entries: [process.env.CREDITS],
 };
 
 console.log("starting conversion");
