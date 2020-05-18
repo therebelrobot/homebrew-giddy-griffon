@@ -1,0 +1,17 @@
+{
+  "headers": [
+    {
+      "source": "**/*.@(json)",
+      "headers": [
+        {
+          "key": "Content-type",
+          "value": "application/json"
+        },
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
+    }
+  ]
+}

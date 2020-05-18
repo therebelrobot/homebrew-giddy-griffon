@@ -1,0 +1,23 @@
+{
+  "name": "homebrew-giddy-griffon",
+  "version": "1.0.0",
+  "description": "A subsection of TheGiddyLimit/homebrew for development",
+  "main": "convert.js",
+  "scripts": {
+    "convert": "node convert.js",
+    "dev": "nodemon convert.js --ignore item"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/therebelrobot/homebrew-giddy-griffon.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/therebelrobot/homebrew-giddy-griffon/issues"
+  },
+  "homepage": "https://github.com/therebelrobot/homebrew-giddy-griffon#readme",
+  "dependencies": {
+    "objectro": "^1.0.6"
+  }
+}
